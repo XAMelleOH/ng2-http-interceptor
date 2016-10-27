@@ -7,7 +7,7 @@
     "ci": "npm run lint && npm run test:single && npm run check-coverage",
     "commit": "git-cz",
     "lint": "tslint src/**/*.ts",
-    "prepublish": "npm run build",
+    "postinstall": "npm run build",
     "test": "ng test",
     "test:single": "npm run test -- --watch=false",
     "test:report": "cd coverage && codecov",
@@ -73,9 +73,6 @@
     "node": ">=6.0.0"
   },
   "config": {
-    "ghooks": {
-      "pre-commit": "echo \"Verifying commit...\" && npm run ci"
-    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
