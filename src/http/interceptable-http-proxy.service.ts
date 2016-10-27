@@ -6,7 +6,7 @@ import { identityFactory } from './util';
 import { isObject } from 'util';
 
 @Injectable()
-export class InterceptableHttpProxyService implements ProxyHandler<any> {
+export class InterceptableHttpProxyService {
 
   private static _callStack: string[] = [];
 
